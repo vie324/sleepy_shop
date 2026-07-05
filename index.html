@@ -1,1 +1,1055 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>店舗一覧 | 睡眠専門ドライヘッドスパ・睡眠整体サロン SLEEPY（スリーピー）</title>
+<meta name="description" content="睡眠専門ドライヘッドスパ・睡眠整体サロン SLEEPY（スリーピー）の店舗一覧。恵比寿駅前店・代官山店・大阪本町・四ツ橋店・福島店のコンセプト、アクセス、営業時間、ご予約はこちらから。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-950: #070d20;
+    --navy-900: #0a1128;
+    --navy-800: #101a3a;
+    --navy-700: #182450;
+    --gold-300: #e9d5a3;
+    --gold-400: #d9bc7a;
+    --gold-500: #c9a86a;
+    --ink-100: #f2f0e9;
+    --ink-200: #ddd9cc;
+    --ink-300: #b8b4a6;
+    --line: rgba(217, 188, 122, 0.22);
+    --glass: rgba(22, 32, 66, 0.55);
+    --serif: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    --sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    --header-h: 64px;
+  }
 
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-padding-top: calc(var(--header-h) + 20px);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+
+  html, body { overflow-x: clip; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--navy-900);
+    color: var(--ink-200);
+    line-height: 1.9;
+    font-size: 15.5px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; }
+
+  :focus-visible {
+    outline: 2px solid var(--gold-300);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* ============ Header ============ */
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 100;
+    height: var(--header-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 clamp(16px, 4vw, 48px);
+    background: rgba(7, 13, 32, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(217, 188, 122, 0.12);
+    transition: background 0.4s ease;
+  }
+  .site-header.is-scrolled { background: rgba(7, 13, 32, 0.92); }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    text-decoration: none;
+    min-width: 0;
+  }
+  .brand-logo {
+    font-family: var(--serif);
+    font-size: 22px;
+    letter-spacing: 0.34em;
+    color: var(--gold-300);
+    white-space: nowrap;
+  }
+  .brand-sub {
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    color: var(--ink-300);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  @media (max-width: 640px) { .brand-sub { display: none; } }
+
+  .global-nav { display: flex; gap: clamp(14px, 3vw, 34px); }
+  .global-nav a {
+    text-decoration: none;
+    font-size: 13.5px;
+    letter-spacing: 0.22em;
+    color: var(--ink-200);
+    padding: 8px 2px;
+    position: relative;
+    white-space: nowrap;
+  }
+  .global-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 100%; bottom: 2px;
+    height: 1px;
+    background: var(--gold-400);
+    transition: right 0.35s ease;
+  }
+  .global-nav a:hover::after { right: 0; }
+
+  /* ============ Hero ============ */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: calc(var(--header-h) + 48px) 20px 88px;
+    overflow: clip;
+    background:
+      radial-gradient(1100px 700px at 82% 6%, #1c2a5e 0%, transparent 55%),
+      radial-gradient(900px 620px at 10% 88%, #131f47 0%, transparent 60%),
+      linear-gradient(178deg, var(--navy-950) 0%, var(--navy-900) 46%, #0c1430 100%);
+  }
+
+  .sky { position: absolute; inset: 0; pointer-events: none; }
+
+  .star {
+    position: absolute;
+    width: 2px; height: 2px;
+    border-radius: 50%;
+    background: #fdf7e6;
+    opacity: 0.75;
+    animation: twinkle 3.6s ease-in-out infinite alternate;
+  }
+  @keyframes twinkle {
+    from { opacity: 0.14; transform: scale(0.7); }
+    to   { opacity: 0.85; transform: scale(1.15); }
+  }
+
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(233, 213, 163, 0.35) 0%, rgba(233, 213, 163, 0) 70%);
+    filter: blur(6px);
+    animation: drift 16s ease-in-out infinite alternate;
+  }
+  @keyframes drift {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(34px, -46px, 0); }
+  }
+
+  .moon {
+    position: absolute;
+    top: clamp(84px, 12vh, 150px);
+    right: clamp(6%, 10vw, 13%);
+    width: clamp(90px, 12vw, 150px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 68% 38%, #f4e3b2 0%, #e0c383 52%, #c9a86a 100%);
+    box-shadow: 0 0 70px 18px rgba(224, 195, 131, 0.28);
+    animation: moonfloat 9s ease-in-out infinite alternate;
+  }
+  .moon::after {
+    content: "";
+    position: absolute;
+    top: -6%; left: -14%;
+    width: 88%; height: 88%;
+    border-radius: 50%;
+    background: var(--navy-950);
+    opacity: 0.94;
+  }
+  @keyframes moonfloat {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-16px); }
+  }
+
+  .shooting-star {
+    position: absolute;
+    top: 18%; left: -12%;
+    width: 130px; height: 1.5px;
+    background: linear-gradient(90deg, rgba(253, 247, 230, 0) 0%, rgba(253, 247, 230, 0.9) 100%);
+    transform: rotate(16deg);
+    opacity: 0;
+    animation: shoot 9.5s ease-in 4s infinite;
+  }
+  @keyframes shoot {
+    0%    { opacity: 0; transform: translate3d(0, 0, 0) rotate(16deg); }
+    3%    { opacity: 0.9; }
+    8%    { opacity: 0; transform: translate3d(58vw, 17vw, 0) rotate(16deg); }
+    100%  { opacity: 0; transform: translate3d(58vw, 17vw, 0) rotate(16deg); }
+  }
+
+  .hero-inner { position: relative; max-width: 760px; }
+
+  .hero-eyebrow {
+    display: inline-block;
+    font-family: var(--serif);
+    font-size: clamp(12px, 2.6vw, 14.5px);
+    letter-spacing: 0.3em;
+    color: var(--gold-300);
+    padding: 10px 6px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(38px, 8.6vw, 74px);
+    letter-spacing: 0.1em;
+    line-height: 1.55;
+    color: var(--ink-100);
+    margin: clamp(26px, 5vh, 44px) 0;
+    text-shadow: 0 0 44px rgba(233, 213, 163, 0.22);
+  }
+
+  .hero-concept {
+    text-align: left;
+    font-size: clamp(13.5px, 1.6vw, 15px);
+    line-height: 2.15;
+    color: var(--ink-300);
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  .hero-producer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: clamp(26px, 4vh, 40px);
+    font-size: 12.5px;
+    letter-spacing: 0.28em;
+    color: var(--gold-400);
+  }
+  .hero-producer::before,
+  .hero-producer::after {
+    content: "";
+    width: 42px; height: 1px;
+    background: var(--line);
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: clamp(30px, 5vh, 46px);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 52px;
+    padding: 12px 34px;
+    border-radius: 999px;
+    font-size: 14.5px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  }
+  .btn-gold {
+    background: linear-gradient(120deg, var(--gold-300) 0%, var(--gold-500) 100%);
+    color: #16204a;
+    font-weight: 700;
+    box-shadow: 0 8px 26px rgba(201, 168, 106, 0.28);
+  }
+  .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(201, 168, 106, 0.42); }
+  .btn-ghost {
+    border: 1px solid rgba(217, 188, 122, 0.45);
+    color: var(--gold-300);
+    background: rgba(217, 188, 122, 0.05);
+  }
+  .btn-ghost:hover { transform: translateY(-3px); background: rgba(217, 188, 122, 0.13); border-color: var(--gold-300); }
+
+  .scroll-hint {
+    position: absolute;
+    left: 50%; bottom: 26px;
+    width: 1px; height: 52px;
+    background: linear-gradient(to bottom, rgba(233, 213, 163, 0) 0%, rgba(233, 213, 163, 0.7) 100%);
+    overflow: hidden;
+  }
+  .scroll-hint::after {
+    content: "";
+    position: absolute;
+    inset: -52px 0 auto 0;
+    height: 52px;
+    background: var(--navy-900);
+    animation: hintdrop 2.4s ease-in-out infinite;
+  }
+  @keyframes hintdrop {
+    from { transform: translateY(0); }
+    to   { transform: translateY(110px); }
+  }
+
+  /* ============ Sections ============ */
+  section { padding: clamp(72px, 11vw, 130px) clamp(18px, 4.5vw, 48px); }
+  .container { max-width: 1120px; margin: 0 auto; }
+
+  .section-head { text-align: center; margin-bottom: clamp(42px, 6vw, 68px); }
+  .section-eyebrow {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0.34em;
+    color: var(--gold-400);
+    text-transform: uppercase;
+  }
+  .section-head h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(26px, 5vw, 38px);
+    letter-spacing: 0.22em;
+    color: var(--ink-100);
+    margin-top: 14px;
+  }
+  .section-head h2::after {
+    content: "";
+    display: block;
+    width: 54px; height: 1px;
+    margin: 22px auto 0;
+    background: linear-gradient(90deg, transparent, var(--gold-400), transparent);
+  }
+  .section-lede {
+    margin-top: 18px;
+    font-size: 14px;
+    color: var(--ink-300);
+    letter-spacing: 0.08em;
+  }
+
+  /* ============ Concept ============ */
+  .concept { background: linear-gradient(180deg, #0c1430 0%, var(--navy-900) 100%); }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  @media (min-width: 720px) { .feature-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .feature-card {
+    padding: 38px 30px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: linear-gradient(165deg, rgba(24, 36, 80, 0.5) 0%, rgba(13, 20, 44, 0.5) 100%);
+    text-align: center;
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  }
+  .feature-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(217, 188, 122, 0.5);
+    box-shadow: 0 18px 44px rgba(4, 8, 22, 0.55);
+  }
+  .feature-icon {
+    display: grid;
+    place-items: center;
+    width: 62px; height: 62px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(217, 188, 122, 0.45);
+    background: radial-gradient(circle, rgba(217, 188, 122, 0.12) 0%, transparent 75%);
+    color: var(--gold-300);
+  }
+  .feature-card h3 {
+    font-family: var(--serif);
+    font-size: 17.5px;
+    letter-spacing: 0.12em;
+    line-height: 1.7;
+    color: var(--gold-300);
+    margin-bottom: 14px;
+  }
+  .feature-card p {
+    font-size: 13.5px;
+    line-height: 2.05;
+    color: var(--ink-300);
+    text-align: left;
+  }
+
+  .mission {
+    margin-top: clamp(44px, 6vw, 64px);
+    text-align: center;
+  }
+  .mission blockquote {
+    display: inline-block;
+    font-family: var(--serif);
+    font-size: clamp(15px, 2.4vw, 18px);
+    letter-spacing: 0.16em;
+    line-height: 2;
+    color: var(--ink-200);
+    padding: 6px 26px;
+    border-left: 1px solid var(--gold-400);
+    border-right: 1px solid var(--gold-400);
+  }
+  .mission cite {
+    display: block;
+    margin-top: 12px;
+    font-style: normal;
+    font-size: 11.5px;
+    letter-spacing: 0.3em;
+    color: var(--gold-400);
+  }
+
+  /* ============ Stores ============ */
+  .stores {
+    background:
+      radial-gradient(900px 480px at 88% 4%, rgba(28, 42, 94, 0.55) 0%, transparent 60%),
+      var(--navy-900);
+  }
+
+  .store-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: -22px 0 clamp(36px, 5vw, 52px);
+  }
+  .filter-btn {
+    min-height: 44px;
+    padding: 8px 26px;
+    border-radius: 999px;
+    border: 1px solid rgba(217, 188, 122, 0.35);
+    background: transparent;
+    color: var(--ink-300);
+    font-family: var(--sans);
+    font-size: 13.5px;
+    letter-spacing: 0.18em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .filter-btn:hover { border-color: var(--gold-300); color: var(--gold-300); }
+  .filter-btn[aria-pressed="true"] {
+    background: linear-gradient(120deg, var(--gold-300) 0%, var(--gold-500) 100%);
+    border-color: transparent;
+    color: #16204a;
+    font-weight: 700;
+  }
+
+  .store-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(22px, 3.5vw, 34px);
+  }
+  @media (min-width: 768px) { .store-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  .store-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: clamp(26px, 4vw, 38px);
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 18px 50px rgba(4, 8, 22, 0.45);
+    overflow-wrap: anywhere;
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  }
+  .store-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(217, 188, 122, 0.55);
+    box-shadow: 0 26px 64px rgba(4, 8, 22, 0.65), 0 0 34px rgba(201, 168, 106, 0.12);
+  }
+  .store-card.is-hidden { display: none; }
+
+  .store-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .area-chip {
+    font-size: 11.5px;
+    letter-spacing: 0.2em;
+    color: #16204a;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: linear-gradient(120deg, var(--gold-300) 0%, var(--gold-500) 100%);
+    white-space: nowrap;
+  }
+  .rating {
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: var(--gold-300);
+    white-space: nowrap;
+  }
+  .rating .rating-count { color: var(--ink-300); font-size: 11.5px; }
+
+  .store-card h3 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(23px, 3vw, 27px);
+    letter-spacing: 0.14em;
+    color: var(--ink-100);
+    line-height: 1.5;
+  }
+  .store-fullname {
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    color: var(--ink-300);
+    margin: 4px 0 18px;
+  }
+
+  .store-catch {
+    font-family: var(--serif);
+    font-size: 15.5px;
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+    color: var(--gold-300);
+    padding-left: 14px;
+    border-left: 2px solid var(--gold-400);
+    margin-bottom: 14px;
+  }
+  .store-concept {
+    font-size: 13.5px;
+    line-height: 2.05;
+    color: var(--ink-300);
+    margin-bottom: 22px;
+  }
+
+  .store-info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 18px;
+    row-gap: 10px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(217, 188, 122, 0.14);
+    border-bottom: 1px solid rgba(217, 188, 122, 0.14);
+    font-size: 13.5px;
+  }
+  .store-info dt {
+    font-size: 11.5px;
+    letter-spacing: 0.24em;
+    color: var(--gold-400);
+    padding-top: 3px;
+    white-space: nowrap;
+  }
+  .store-info dd { color: var(--ink-200); line-height: 1.85; }
+  .access-list { list-style: none; }
+  .access-list li { position: relative; padding-left: 15px; }
+  .access-list li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0.85em;
+    width: 6px; height: 1px;
+    background: var(--gold-400);
+  }
+
+  .feature-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0 4px;
+  }
+  .chip {
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    color: var(--gold-300);
+    padding: 4px 13px;
+    border-radius: 999px;
+    border: 1px solid rgba(217, 188, 122, 0.4);
+    background: rgba(217, 188, 122, 0.07);
+    white-space: nowrap;
+  }
+
+  .menu-block { margin: 18px 0 26px; }
+  .menu-title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 12.5px;
+    letter-spacing: 0.3em;
+    color: var(--gold-400);
+    margin-bottom: 10px;
+  }
+  .menu-list { list-style: none; font-size: 13.5px; }
+  .menu-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 7px 0;
+  }
+  .menu-list .menu-name { color: var(--ink-200); }
+  .menu-list .menu-dots {
+    flex: 1;
+    min-width: 20px;
+    border-bottom: 1px dotted rgba(217, 188, 122, 0.35);
+    transform: translateY(-4px);
+  }
+  .menu-list .menu-price {
+    color: var(--gold-300);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  .store-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: auto;
+  }
+  @media (min-width: 440px) { .store-actions { grid-template-columns: 1.25fr 1fr; } }
+  .store-actions .btn { padding: 12px 16px; font-size: 13.5px; letter-spacing: 0.1em; }
+  .btn svg { flex-shrink: 0; }
+
+  /* ============ Footer ============ */
+  .site-footer {
+    text-align: center;
+    padding: clamp(60px, 9vw, 96px) 20px 44px;
+    background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-950) 100%);
+    border-top: 1px solid rgba(217, 188, 122, 0.12);
+  }
+  .footer-logo {
+    font-family: var(--serif);
+    font-size: 26px;
+    letter-spacing: 0.4em;
+    color: var(--gold-300);
+  }
+  .footer-name { margin-top: 14px; font-size: 12.5px; letter-spacing: 0.14em; color: var(--ink-300); }
+  .footer-producer { margin-top: 6px; font-size: 11.5px; letter-spacing: 0.26em; color: var(--gold-400); }
+  .footer-copy { margin-top: 30px; font-size: 11px; letter-spacing: 0.2em; color: rgba(184, 180, 166, 0.55); }
+
+  /* ============ Scroll reveal ============ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.6s ease var(--d, 0s), transform 0.6s ease var(--d, 0s);
+  }
+  .reveal.is-visible { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001s !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001s !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+    .scroll-hint, .shooting-star { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="SLEEPY トップへ">
+    <span class="brand-logo">SLEEPY</span>
+    <span class="brand-sub">睡眠専門ドライヘッドスパ・睡眠整体サロン</span>
+  </a>
+  <nav class="global-nav" aria-label="グローバルナビゲーション">
+    <a href="#concept">コンセプト</a>
+    <a href="#stores">店舗一覧</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ Hero ============ -->
+  <section class="hero" aria-label="ブランド紹介">
+    <div class="sky" aria-hidden="true">
+      <div class="moon"></div>
+      <div class="shooting-star"></div>
+    </div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">睡眠専門ドライヘッドスパ・睡眠整体サロン SLEEPY</p>
+      <h1>眠る力を、<br>呼び覚ます。</h1>
+      <p class="hero-concept">その場しのぎのリラクゼーションではなく——。開業から18年、数十万人のお客様と向き合い続けたKADOMORIグループが辿り着いた、東洋医学・西洋医学・エステの知見を融合させた独自の“神経をほどく”整体『頭の深呼吸 ニューロン・リリース』。乱れた自律神経を整え、脳を深い休息へと導くことで、あなたが本来持っている「眠る力」を呼び覚まします。</p>
+      <p class="hero-producer">KADOMORIグループ プロデュース</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#stores">店舗一覧を見る</a>
+        <a class="btn btn-ghost" href="#concept">こだわりを知る</a>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ Concept ============ -->
+  <section class="concept" id="concept">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-eyebrow">Our Method</p>
+        <h2>SLEEPYのこだわり</h2>
+        <p class="section-lede">乱れた自律神経を整え、脳を深い休息へと導く。SLEEPYが向き合うのは、あなたが本来持っている「眠る力」です。</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+              <path d="M4 10c3-2 6-2 9 0s6 2 9 0"/>
+              <path d="M4 15c3-2 6-2 9 0s6 2 9 0"/>
+              <path d="M4 20c3-2 6-2 9 0s6 2 9 0"/>
+            </svg>
+          </div>
+          <h3>頭の深呼吸<br>ニューロン・リリース</h3>
+          <p>東洋医学・西洋医学・エステの知見を融合させた、独自の“神経をほどく”整体。数十万人のお客様と向き合い続けたKADOMORIグループが辿り着いたメソッドです。</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+              <path d="M14 3c-3 3-3 6 0 9s3 6 0 9"/>
+              <circle cx="14" cy="24" r="1.6"/>
+              <circle cx="14" cy="3.5" r="1.6"/>
+            </svg>
+          </div>
+          <h3>睡眠整体</h3>
+          <p>骨を覆う筋肉へのアプローチで全身の歪みと緊張を解きほぐし、不眠やストレスの根本原因にアプローチ。「睡眠矯正」メソッドで眠りの質を改善します。</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+              <path d="M21 16a8.5 8.5 0 1 1-9-12.5A7 7 0 0 0 21 16z"/>
+            </svg>
+          </div>
+          <h3>ドライヘッドスパ</h3>
+          <p>頭蓋骨・筋肉・リンパにアプローチする独自の睡眠施術「脳内マッサージ」。頭の歪みと筋肉の緊張を解消し、脳を深い休息へと導きます。</p>
+        </article>
+      </div>
+      <div class="mission reveal">
+        <blockquote>「解決できないお悩みやコンプレックスを世の中から無くす」</blockquote>
+        <cite>SLEEPY MISSION</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Stores ============ -->
+  <section class="stores" id="stores">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-eyebrow">Salon List</p>
+        <h2>店舗一覧</h2>
+        <p class="section-lede">東京・大阪の全4店舗で、みなさまの眠りのお悩みに向き合います。</p>
+      </div>
+
+      <div class="store-filter reveal" role="group" aria-label="エリアで絞り込み">
+        <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">すべて</button>
+        <button type="button" class="filter-btn" data-filter="tokyo" aria-pressed="false">東京</button>
+        <button type="button" class="filter-btn" data-filter="osaka" aria-pressed="false">大阪</button>
+      </div>
+
+      <div class="store-grid">
+
+        <!-- 恵比寿駅前店 -->
+        <article class="store-card reveal" data-region="tokyo" id="store-ebisu">
+          <div class="store-top">
+            <span class="area-chip">東京・恵比寿</span>
+            <span class="rating" aria-label="口コミ評価 4.94、102件">★ 4.94 <span class="rating-count">（102件）</span></span>
+          </div>
+          <h3>恵比寿駅前店</h3>
+          <p class="store-fullname">睡眠整体ドライヘッドスパサロン SLEEPY 恵比寿駅前店</p>
+          <p class="store-catch">「脳」と自律神経に働きかけ、深い眠りとクリアな心を取り戻す</p>
+          <p class="store-concept">独自の「睡眠矯正」メソッドで睡眠の質を改善するドライヘッドスパサロン。乱れた自律神経を整え、脳を深い休息へと導くことで、本来の「眠る力」を呼び覚まします。</p>
+          <dl class="store-info">
+            <dt>住所</dt>
+            <dd>〒150-0021 東京都渋谷区恵比寿西1-8-7 見須ビル7F</dd>
+            <dt>アクセス</dt>
+            <dd>
+              <ul class="access-list">
+                <li>東京メトロ日比谷線 恵比寿駅 2番出口 徒歩1分</li>
+                <li>JR恵比寿駅 西口 徒歩3分</li>
+              </ul>
+            </dd>
+            <dt>営業時間</dt>
+            <dd>11:00〜21:00（不定休）</dd>
+          </dl>
+          <div class="feature-chips">
+            <span class="chip">全室完全個室</span>
+            <span class="chip">完全予約制</span>
+            <span class="chip">カード・PayPay対応（現金不可）</span>
+          </div>
+          <div class="menu-block">
+            <p class="menu-title">Menu</p>
+            <ul class="menu-list">
+              <li><span class="menu-name">脳内マッサージ 30分</span><span class="menu-dots"></span><span class="menu-price">¥3,300</span></li>
+              <li><span class="menu-name">ドライヘッドスパ×睡眠整体 60分</span><span class="menu-dots"></span><span class="menu-price">¥6,600</span></li>
+              <li><span class="menu-name">骨膜整体</span><span class="menu-dots"></span><span class="menu-price">¥5,500</span></li>
+            </ul>
+          </div>
+          <div class="store-actions">
+            <a class="btn btn-gold" href="https://beauty.hotpepper.jp/kr/slnH000632668/" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 7h12M6 1v3M10 1v3"/></svg>
+              ホットペッパーで予約
+            </a>
+            <a class="btn btn-ghost" href="https://maps.app.goo.gl/K6ALcfTQUxh4v4na6" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M8 14.5s-4.5-4.2-4.5-7.5a4.5 4.5 0 0 1 9 0c0 3.3-4.5 7.5-4.5 7.5z"/><circle cx="8" cy="7" r="1.7"/></svg>
+              Googleマップで見る
+            </a>
+          </div>
+        </article>
+
+        <!-- 代官山店 -->
+        <article class="store-card reveal" data-region="tokyo" id="store-daikanyama">
+          <div class="store-top">
+            <span class="area-chip">東京・代官山</span>
+          </div>
+          <h3>代官山店</h3>
+          <p class="store-fullname">睡眠整体サロン SLEEPY 代官山店</p>
+          <p class="store-catch">睡眠専門ドライヘッドスパで、脳の疲れをデトックス</p>
+          <p class="store-concept">頭蓋骨・筋肉・リンパにアプローチする独自の睡眠施術「脳内マッサージ」で、頭の歪みと筋肉の緊張を解消する極上のヘッドスパ体験をお届けします。</p>
+          <dl class="store-info">
+            <dt>住所</dt>
+            <dd>〒150-0021 東京都渋谷区恵比寿西2-20-15 solstice代官山 B1</dd>
+            <dt>アクセス</dt>
+            <dd>
+              <ul class="access-list">
+                <li>東急東横線 代官山駅 徒歩2分</li>
+                <li>JR恵比寿駅 西口 徒歩5分</li>
+              </ul>
+            </dd>
+            <dt>営業時間</dt>
+            <dd>11:00〜21:00（不定休）</dd>
+          </dl>
+          <div class="feature-chips">
+            <span class="chip">完全予約制</span>
+            <span class="chip">カード決済のみ</span>
+          </div>
+          <div class="menu-block">
+            <p class="menu-title">Menu</p>
+            <ul class="menu-list">
+              <li><span class="menu-name">ご新規様限定 脳内マッサージ 30分</span><span class="menu-dots"></span><span class="menu-price">¥2,200</span></li>
+            </ul>
+          </div>
+          <div class="store-actions">
+            <a class="btn btn-gold" href="https://reserve.sleepy-ebisu.com/index0002.php" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 7h12M6 1v3M10 1v3"/></svg>
+              公式WEB予約
+            </a>
+            <a class="btn btn-ghost" href="https://maps.app.goo.gl/BfDxo7phgKAYH1sr7" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M8 14.5s-4.5-4.2-4.5-7.5a4.5 4.5 0 0 1 9 0c0 3.3-4.5 7.5-4.5 7.5z"/><circle cx="8" cy="7" r="1.7"/></svg>
+              Googleマップで見る
+            </a>
+          </div>
+        </article>
+
+        <!-- 大阪本町・四ツ橋店 -->
+        <article class="store-card reveal" data-region="osaka" id="store-osaka-hommachi">
+          <div class="store-top">
+            <span class="area-chip">大阪・本町 / 四ツ橋</span>
+            <span class="rating" aria-label="口コミ評価 4.80、108件">★ 4.80 <span class="rating-count">（108件）</span></span>
+          </div>
+          <h3>大阪本町・四ツ橋店</h3>
+          <p class="store-fullname">睡眠整体ヘッドスパサロン SLEEPY 大阪本町・四ツ橋店</p>
+          <p class="store-catch">完全個室で、自律神経から“疲労をとる睡眠”へ</p>
+          <p class="store-concept">骨を覆う筋肉へのアプローチで全身の歪みと緊張を解きほぐし、不眠やストレスの根本原因にアプローチ。一人でも多くの眠りのお悩みに向き合うことがミッションです。</p>
+          <dl class="store-info">
+            <dt>住所</dt>
+            <dd>〒550-0013 大阪府大阪市西区新町1-8-20 カドモリビル</dd>
+            <dt>アクセス</dt>
+            <dd>
+              <ul class="access-list">
+                <li>Osaka Metro四つ橋線 四ツ橋駅 徒歩6分</li>
+                <li>長堀鶴見緑地線 西大橋駅 徒歩7分</li>
+                <li>御堂筋線 心斎橋駅 徒歩10分</li>
+              </ul>
+            </dd>
+            <dt>営業時間</dt>
+            <dd>10:30〜21:30（不定休）</dd>
+          </dl>
+          <div class="feature-chips">
+            <span class="chip">全6室完全個室</span>
+            <span class="chip">女性スタッフ在籍</span>
+            <span class="chip">カード・PayPay対応</span>
+          </div>
+          <div class="menu-block">
+            <p class="menu-title">Menu</p>
+            <ul class="menu-list">
+              <li><span class="menu-name">初回限定 脳内マッサージ 30分</span><span class="menu-dots"></span><span class="menu-price">¥2,200</span></li>
+              <li><span class="menu-name">脳内マッサージ 60分</span><span class="menu-dots"></span><span class="menu-price">¥4,400</span></li>
+              <li><span class="menu-name">睡眠整体＋脳内マッサージ 60分</span><span class="menu-dots"></span><span class="menu-price">¥8,800</span></li>
+            </ul>
+          </div>
+          <div class="store-actions">
+            <a class="btn btn-gold" href="https://beauty.hotpepper.jp/kr/slnH000739775/" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 7h12M6 1v3M10 1v3"/></svg>
+              ホットペッパーで予約
+            </a>
+            <a class="btn btn-ghost" href="https://maps.app.goo.gl/W8k6ifzGfv9MgGKh6" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M8 14.5s-4.5-4.2-4.5-7.5a4.5 4.5 0 0 1 9 0c0 3.3-4.5 7.5-4.5 7.5z"/><circle cx="8" cy="7" r="1.7"/></svg>
+              Googleマップで見る
+            </a>
+          </div>
+        </article>
+
+        <!-- 福島店 -->
+        <article class="store-card reveal" data-region="osaka" id="store-fukushima">
+          <div class="store-top">
+            <span class="area-chip">大阪・福島</span>
+            <span class="rating" aria-label="口コミ評価 4.94、36件">★ 4.94 <span class="rating-count">（36件）</span></span>
+          </div>
+          <h3>福島店</h3>
+          <p class="store-fullname">睡眠整体ヘッドスパ Head spa SLEEPY 福島店</p>
+          <p class="store-catch">眠れない・疲れが抜けない方へ。脳と自律神経を整える</p>
+          <p class="store-concept">脳疲労を和らげ、自律神経を整えることで睡眠リズムを改善。内側から眠りと美しさをサポートする整体・ドライヘッドスパ専門店です。</p>
+          <dl class="store-info">
+            <dt>住所</dt>
+            <dd>〒553-0003 大阪府大阪市福島区福島2-8-22 福田ビル302</dd>
+            <dt>アクセス</dt>
+            <dd>
+              <ul class="access-list">
+                <li>JR東西線 新福島駅 徒歩30秒</li>
+                <li>阪神本線 福島駅 徒歩2分</li>
+                <li>JR大阪環状線 福島駅 徒歩4分</li>
+              </ul>
+            </dd>
+            <dt>営業時間</dt>
+            <dd>11:00〜21:00（不定休）</dd>
+          </dl>
+          <div class="feature-chips">
+            <span class="chip">完全個室</span>
+            <span class="chip">24時間オンライン予約</span>
+            <span class="chip">カード決済のみ（現金不可）</span>
+          </div>
+          <div class="menu-block">
+            <p class="menu-title">Menu</p>
+            <ul class="menu-list">
+              <li><span class="menu-name">脳内マッサージ 30分</span><span class="menu-dots"></span><span class="menu-price">¥3,300</span></li>
+              <li><span class="menu-name">睡眠整体×脳内マッサージ 90分</span><span class="menu-dots"></span><span class="menu-price">¥5,500</span></li>
+              <li><span class="menu-name">月曜限定 脳内リセット×睡眠スパ</span><span class="menu-dots"></span><span class="menu-price">¥11,000</span></li>
+            </ul>
+          </div>
+          <div class="store-actions">
+            <a class="btn btn-gold" href="https://beauty.hotpepper.jp/kr/slnH000758226/" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 7h12M6 1v3M10 1v3"/></svg>
+              ホットペッパーで予約
+            </a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E7%A6%8F%E5%B3%B6%E5%8C%BA%E7%A6%8F%E5%B3%B62-8-22%20%E7%A6%8F%E7%94%B0%E3%83%93%E3%83%AB" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M8 14.5s-4.5-4.2-4.5-7.5a4.5 4.5 0 0 1 9 0c0 3.3-4.5 7.5-4.5 7.5z"/><circle cx="8" cy="7" r="1.7"/></svg>
+              Googleマップで見る
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="footer-logo">SLEEPY</p>
+  <p class="footer-name">睡眠専門ドライヘッドスパ・睡眠整体サロン SLEEPY（スリーピー）</p>
+  <p class="footer-producer">KADOMORIグループ プロデュース</p>
+  <p class="footer-copy">© 2026 SLEEPY</p>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---- Starfield & floating orbs ---- */
+  var sky = document.querySelector(".sky");
+  if (sky && !reduced) {
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < 90; i++) {
+      var s = document.createElement("span");
+      s.className = "star";
+      var size = 1 + Math.random() * 1.8;
+      s.style.width = size + "px";
+      s.style.height = size + "px";
+      s.style.left = Math.random() * 100 + "%";
+      s.style.top = Math.random() * 100 + "%";
+      s.style.animationDelay = (Math.random() * -3.6).toFixed(2) + "s";
+      s.style.animationDuration = (2.4 + Math.random() * 3.6).toFixed(2) + "s";
+      frag.appendChild(s);
+    }
+    for (var j = 0; j < 5; j++) {
+      var o = document.createElement("span");
+      o.className = "orb";
+      var osize = 46 + Math.random() * 90;
+      o.style.width = osize + "px";
+      o.style.height = osize + "px";
+      o.style.left = Math.random() * 88 + "%";
+      o.style.top = 12 + Math.random() * 72 + "%";
+      o.style.animationDelay = (Math.random() * -16).toFixed(2) + "s";
+      o.style.animationDuration = (13 + Math.random() * 9).toFixed(2) + "s";
+      frag.appendChild(o);
+    }
+    sky.appendChild(frag);
+  }
+
+  /* ---- Header shadow on scroll ---- */
+  var header = document.querySelector(".site-header");
+  var onScroll = function () {
+    header.classList.toggle("is-scrolled", window.scrollY > 24);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* ---- Scroll reveal (staggered, with safety fallback) ---- */
+  var targets = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+  var revealAll = function () {
+    targets.forEach(function (el) { el.classList.add("is-visible"); });
+  };
+  if (reduced || !("IntersectionObserver" in window)) {
+    revealAll();
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var siblings = el.parentElement
+          ? Array.prototype.filter.call(el.parentElement.children, function (c) {
+              return c.classList.contains("reveal") && !c.classList.contains("is-visible");
+            })
+          : [el];
+        var idx = Math.min(Math.max(siblings.indexOf(el), 0), 3);
+        el.style.setProperty("--d", (idx * 0.1).toFixed(2) + "s");
+        el.classList.add("is-visible");
+        io.unobserve(el);
+      });
+    }, { threshold: 0.08, rootMargin: "0px 0px -4% 0px" });
+    targets.forEach(function (el) { io.observe(el); });
+    // Safety net: never leave content invisible (old browsers, odd scroll containers).
+    window.setTimeout(revealAll, 3000);
+  }
+
+  /* ---- Area filter ---- */
+  var buttons = Array.prototype.slice.call(document.querySelectorAll(".filter-btn"));
+  var cards = Array.prototype.slice.call(document.querySelectorAll(".store-card"));
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var filter = btn.getAttribute("data-filter");
+      buttons.forEach(function (b) {
+        b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+      });
+      cards.forEach(function (card) {
+        var show = filter === "all" || card.getAttribute("data-region") === filter;
+        card.classList.toggle("is-hidden", !show);
+        if (show && !reduced) {
+          card.classList.remove("is-visible");
+          void card.offsetWidth; /* restart the reveal transition */
+          card.style.setProperty("--d", "0s");
+          card.classList.add("is-visible");
+        }
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
