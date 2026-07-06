@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>店舗一覧 | 睡眠専門ドライヘッドスパ・睡眠整体サロン SLEEPY（スリーピー）</title>
 <meta name="description" content="睡眠専門ドライヘッドスパ・睡眠整体サロン SLEEPY（スリーピー）の店舗一覧。恵比寿駅前店・代官山店・大阪本町・四ツ橋店・福島店のコンセプト、アクセス、営業時間、ご予約はこちらから。">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/logo-mark.png">
+<meta property="og:title" content="店舗一覧 | 睡眠整体サロン SLEEPY（スリーピー）">
+<meta property="og:description" content="眠る力を、呼び覚ます。KADOMORIグループ プロデュースの睡眠専門ドライヘッドスパ・睡眠整体サロン SLEEPY 店舗一覧。">
+<meta property="og:image" content="assets/logo.png">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -76,14 +82,27 @@
 
   .brand {
     display: flex;
-    align-items: baseline;
-    gap: 14px;
+    align-items: center;
+    gap: 12px;
     text-decoration: none;
     min-width: 0;
   }
+  .brand-mark {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+    animation: markbob 4.2s ease-in-out infinite;
+  }
+  @keyframes markbob {
+    0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+    50%      { transform: translateY(-3px) rotate(1.5deg); }
+  }
+  .brand-text { display: flex; flex-direction: column; min-width: 0; line-height: 1.15; }
   .brand-logo {
     font-family: var(--serif);
-    font-size: 22px;
+    font-size: 21px;
     letter-spacing: 0.34em;
     color: var(--gold-300);
     white-space: nowrap;
@@ -202,6 +221,40 @@
   }
 
   .hero-inner { position: relative; max-width: 760px; }
+
+  .hero-logo-wrap {
+    position: relative;
+    display: inline-block;
+    margin-bottom: clamp(22px, 4vh, 40px);
+  }
+  .hero-logo-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -14% -8% -10%;
+    background: radial-gradient(circle at 50% 42%, rgba(233, 213, 163, 0.22) 0%, rgba(233, 213, 163, 0) 68%);
+    filter: blur(6px);
+    z-index: -1;
+    animation: haloPulse 6s ease-in-out infinite;
+  }
+  @keyframes haloPulse {
+    0%, 100% { opacity: 0.55; transform: scale(0.96); }
+    50%      { opacity: 1; transform: scale(1.06); }
+  }
+  .hero-logo {
+    width: clamp(210px, 34vw, 340px);
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 14px 40px rgba(0, 0, 0, 0.45));
+    animation: logoFloat 7s ease-in-out infinite, logoEnter 1.1s cubic-bezier(0.16, 0.84, 0.44, 1) both;
+  }
+  @keyframes logoFloat {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-12px); }
+  }
+  @keyframes logoEnter {
+    from { opacity: 0; transform: translateY(26px) scale(0.94); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
 
   .hero-eyebrow {
     display: inline-block;
@@ -495,12 +548,24 @@
     white-space: nowrap;
   }
   .rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     font-size: 13px;
     letter-spacing: 0.06em;
     color: var(--gold-300);
     white-space: nowrap;
   }
   .rating .rating-count { color: var(--ink-300); font-size: 11.5px; }
+  .rating .rating-src {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--ink-200);
+    padding: 2px 7px;
+    border: 1px solid rgba(217, 188, 122, 0.35);
+    border-radius: 999px;
+  }
 
   .store-card h3 {
     font-family: var(--serif);
@@ -627,12 +692,15 @@
     border-top: 1px solid rgba(217, 188, 122, 0.12);
   }
   .footer-logo {
-    font-family: var(--serif);
-    font-size: 26px;
-    letter-spacing: 0.4em;
-    color: var(--gold-300);
+    width: clamp(150px, 30vw, 200px);
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.4));
+    transition: transform 0.4s ease;
   }
-  .footer-name { margin-top: 14px; font-size: 12.5px; letter-spacing: 0.14em; color: var(--ink-300); }
+  .footer-logo:hover { transform: translateY(-4px) scale(1.02); }
+  .footer-name { margin-top: 20px; font-size: 12.5px; letter-spacing: 0.14em; color: var(--ink-300); }
   .footer-producer { margin-top: 6px; font-size: 11.5px; letter-spacing: 0.26em; color: var(--gold-400); }
   .footer-copy { margin-top: 30px; font-size: 11px; letter-spacing: 0.2em; color: rgba(184, 180, 166, 0.55); }
 
@@ -659,8 +727,11 @@
 
 <header class="site-header">
   <a class="brand" href="#top" aria-label="SLEEPY トップへ">
-    <span class="brand-logo">SLEEPY</span>
-    <span class="brand-sub">睡眠専門ドライヘッドスパ・睡眠整体サロン</span>
+    <img class="brand-mark" src="assets/logo-mark.png" alt="" width="42" height="42">
+    <span class="brand-text">
+      <span class="brand-logo">SLEEPY</span>
+      <span class="brand-sub">睡眠専門ドライヘッドスパ・睡眠整体サロン</span>
+    </span>
   </a>
   <nav class="global-nav" aria-label="グローバルナビゲーション">
     <a href="#concept">コンセプト</a>
@@ -677,10 +748,11 @@
       <div class="shooting-star"></div>
     </div>
     <div class="hero-inner">
-      <p class="hero-eyebrow">睡眠専門ドライヘッドスパ・睡眠整体サロン SLEEPY</p>
+      <span class="hero-logo-wrap">
+        <img class="hero-logo" src="assets/logo.png" alt="睡眠整体サロン SLEEPY® Produced by KADOMORI" width="800" height="800">
+      </span>
       <h1>眠る力を、<br>呼び覚ます。</h1>
       <p class="hero-concept">その場しのぎのリラクゼーションではなく——。開業から18年、数十万人のお客様と向き合い続けたKADOMORIグループが辿り着いた、東洋医学・西洋医学・エステの知見を融合させた独自の“神経をほどく”整体『頭の深呼吸 ニューロン・リリース』。乱れた自律神経を整え、脳を深い休息へと導くことで、あなたが本来持っている「眠る力」を呼び覚まします。</p>
-      <p class="hero-producer">KADOMORIグループ プロデュース</p>
       <div class="hero-cta">
         <a class="btn btn-gold" href="#stores">店舗一覧を見る</a>
         <a class="btn btn-ghost" href="#concept">こだわりを知る</a>
@@ -731,7 +803,7 @@
         </article>
       </div>
       <div class="mission reveal">
-        <blockquote>「解決できないお悩みやコンプレックスを世の中から無くす」</blockquote>
+        <blockquote>「睡眠と自律神経ケアを、誰もが受けられる新しい習慣にする。」</blockquote>
         <cite>SLEEPY MISSION</cite>
       </div>
     </div>
@@ -806,6 +878,7 @@
         <article class="store-card reveal" data-region="tokyo" id="store-daikanyama">
           <div class="store-top">
             <span class="area-chip">東京・代官山</span>
+            <span class="rating" aria-label="Google口コミ評価 4.8、279件"><span class="rating-src">Google</span>★ 4.8 <span class="rating-count">（279件）</span></span>
           </div>
           <h3>代官山店</h3>
           <p class="store-fullname">睡眠整体サロン SLEEPY 代官山店</p>
@@ -818,7 +891,7 @@
             <dd>
               <ul class="access-list">
                 <li>東急東横線 代官山駅 徒歩2分</li>
-                <li>JR恵比寿駅 西口 徒歩5分</li>
+                <li>JR恵比寿駅 西口 徒歩10分</li>
               </ul>
             </dd>
             <dt>営業時間</dt>
@@ -831,7 +904,7 @@
           <div class="menu-block">
             <p class="menu-title">Menu</p>
             <ul class="menu-list">
-              <li><span class="menu-name">ご新規様限定 脳内マッサージ 30分</span><span class="menu-dots"></span><span class="menu-price">¥2,200</span></li>
+              <li><span class="menu-name">ご新規様限定 脳内マッサージ 30分</span><span class="menu-dots"></span><span class="menu-price">¥3,300</span></li>
             </ul>
           </div>
           <div class="store-actions">
@@ -878,7 +951,7 @@
           <div class="menu-block">
             <p class="menu-title">Menu</p>
             <ul class="menu-list">
-              <li><span class="menu-name">初回限定 脳内マッサージ 30分</span><span class="menu-dots"></span><span class="menu-price">¥2,200</span></li>
+              <li><span class="menu-name">初回限定 脳内マッサージ 30分</span><span class="menu-dots"></span><span class="menu-price">¥2,750</span></li>
               <li><span class="menu-name">脳内マッサージ 60分</span><span class="menu-dots"></span><span class="menu-price">¥4,400</span></li>
               <li><span class="menu-name">睡眠整体＋脳内マッサージ 60分</span><span class="menu-dots"></span><span class="menu-price">¥8,800</span></li>
             </ul>
@@ -950,7 +1023,7 @@
 </main>
 
 <footer class="site-footer">
-  <p class="footer-logo">SLEEPY</p>
+  <img class="footer-logo" src="assets/logo.png" alt="睡眠整体サロン SLEEPY® Produced by KADOMORI" width="800" height="800">
   <p class="footer-name">睡眠専門ドライヘッドスパ・睡眠整体サロン SLEEPY（スリーピー）</p>
   <p class="footer-producer">KADOMORIグループ プロデュース</p>
   <p class="footer-copy">© 2026 SLEEPY</p>
